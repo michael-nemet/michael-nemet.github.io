@@ -3,127 +3,548 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum – Michael Nemet</title>
+
+  <title>Michael Nemet – Autor</title>
+
+  <meta
+    name="description"
+    content="Bücher von Michael Nemet über kritisches Denken, künstliche Intelligenz und die Praxis der Arbeitswelt."
+  >
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    * {
+      box-sizing: border-box;
     }
 
-    h1, h2 {
-      margin-top: 32px;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1b2430;
+      background: #f5f7f9;
     }
 
     a {
-      color: #0057b8;
+      color: inherit;
+    }
+
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 18px 24px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 70px 20px 60px;
+      border-bottom: 1px solid #e0e5ea;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.3rem, 6vw, 4.2rem);
+      color: #0b1f3a;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #4d5968;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      margin-bottom: 8px;
+      font-size: 2rem;
+      color: #0b1f3a;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #647181;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .book {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cover-wrap {
+      background: #edf1f5;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .book img {
+      width: 100%;
+      max-width: 285px;
+      height: 410px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .book-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .book h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      color: #0b1f3a;
+    }
+
+    .book p {
+      margin-top: 0;
+      color: #4d5968;
+      flex: 1;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: #0b1f3a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: #163a68;
+    }
+
+    .about {
+      margin-top: 80px;
+      background: white;
+      padding: 38px;
+      border-radius: 14px;
+      box-shadow: 0 5px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .about h2 {
+      margin-top: 0;
+      color: #0b1f3a;
+    }
+
+    .legal {
+      margin-top: 70px;
+      padding-top: 40px;
+      border-top: 1px solid #cfd6dd;
+    }
+
+    .legal h2 {
+      color: #0b1f3a;
+      margin-top: 45px;
+    }
+
+    .legal h3 {
+      margin-top: 30px;
+    }
+
+    footer {
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 850px) {
+      .books {
+        grid-template-columns: 1fr;
+      }
+
+      .book {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .book img {
+        height: auto;
+        max-height: 620px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Impressum</h1>
+<header>
+  <div class="nav">
+    <a class="brand" href="#start">Michael Nemet</a>
 
-  <p><strong>Angaben gemäß § 5 DDG</strong></p>
+    <nav>
+      <a href="#buecher">Bücher</a>
+      <a href="#autor">Über den Autor</a>
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </nav>
+  </div>
+</header>
 
-  <p>
-    Michael Nemet<br>
-    Norbertstraße 30<br>
-    48691 Vreden<br>
-    Deutschland
-  </p>
 
-  <p>
-    <strong>Kontakt</strong><br>
-    Telefon:
-    <a href="tel:+492564392144">+49 2564 392144</a><br>
-    E-Mail:
-    <a href="mailto:autor.nemet@t-online.de">
-      autor.nemet@t-online.de
-    </a>
-  </p>
-<p>
-  <strong>Umsatzsteuer-Identifikationsnummer</strong><br>
-  Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
-  DE464404052
-</p>
-  <h2>Datenschutzerklärung</h2>
-
-  <h3>1. Verantwortlicher</h3>
+<section class="hero" id="start">
+  <h1>Michael Nemet</h1>
 
   <p>
-    Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO)
-    für diese Website ist:
+    Bücher über kritisches Denken, künstliche Intelligenz
+    und die Realität hinter Prozessen, Entscheidungen und Fehlern.
   </p>
+</section>
 
-  <p>
-    Michael Nemet<br>
-    Norbertstraße 30<br>
-    48691 Vreden<br>
-    Deutschland<br>
-    E-Mail:
-    <a href="mailto:autor.nemet@t-online.de">
-      autor.nemet@t-online.de
-    </a>
-  </p>
 
-  <h3>2. Hosting über GitHub Pages</h3>
+<main>
 
-  <p>
-    Diese Website wird über GitHub Pages bereitgestellt.
-    Anbieter des Dienstes ist GitHub, Inc. beziehungsweise GitHub B.V.
-  </p>
+  <section id="buecher">
 
-  <p>
-    Beim Aufruf dieser Website können durch GitHub technisch erforderliche
-    Informationen verarbeitet werden. Dazu gehören insbesondere die
-    IP-Adresse, Datum und Uhrzeit des Zugriffs sowie Informationen über
-    das verwendete Gerät und den Browser.
-  </p>
+    <div class="section-title">
+      <h2>Meine Bücher</h2>
+      <p>Drei unterschiedliche Themen – mit einem gemeinsamen Blick auf die Praxis.</p>
+    </div>
 
-  <p>
-    Die Verarbeitung erfolgt zur technischen Bereitstellung sowie zur
-    Gewährleistung der Stabilität und Sicherheit der Website.
-    Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
-    Das berechtigte Interesse besteht im sicheren und störungsfreien
-    Betrieb dieser Website.
-  </p>
 
-  <p>
-    Empfänger der Daten ist insbesondere GitHub als Hosting-Anbieter.
-    Auf die Speicherdauer der durch GitHub verarbeiteten Daten habe ich
-    keinen unmittelbaren Einfluss.
-    Weitere Informationen finden Sie in der
-    <a
-      href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
-      target="_blank"
-      rel="noopener noreferrer">
-      Datenschutzerklärung von GitHub
-    </a>.
-  </p>
+    <div class="books">
 
-  <h3>3. Weitere Dienste</h3>
+      <article class="book">
 
-  <p>
-    Diese Website verwendet von meiner Seite aus keine Analysewerkzeuge,
-    kein Kontaktformular, keine eingebetteten sozialen Netzwerke und
-    keine Werbe- oder Trackingdienste.
-  </p>
+        <div class="cover-wrap">
+          <img
+            src="zwischen-wissen-und-wahrheit.webp"
+            alt="Buchcover Zwischen Wissen und Wahrheit von Michael Nemet"
+            loading="lazy"
+          >
+        </div>
 
-  <h3>4. Ihre Rechte</h3>
+        <div class="book-content">
 
-  <p>
-    Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere
-    das Recht auf Auskunft über Ihre personenbezogenen Daten sowie auf
-    Berichtigung, Löschung oder Einschränkung der Verarbeitung.
-    Außerdem besteht das Recht, sich bei einer zuständigen
-    Datenschutzaufsichtsbehörde zu beschweren.
-  </p>
+          <h3>Zwischen Wissen und Wahrheit</h3>
+
+          <p>
+            Wie entstehen aus Beobachtungen belastbare Schlussfolgerungen?
+            Das Buch beschäftigt sich mit Wahrnehmung, Unsicherheit,
+            kritischem Prüfen und der Frage, wie wir Entscheidungen treffen,
+            wenn eindeutige Antworten fehlen.
+          </p>
+
+          <a
+            class="button"
+            href="https://www.amazon.de/dp/B0HD9PLRDJ"
+          >
+            Bei Amazon ansehen
+          </a>
+
+        </div>
+      </article>
+
+
+      <article class="book">
+
+        <div class="cover-wrap">
+          <img
+            src="die-ki-und-ich.webp"
+            alt="Buchcover Die KI und Ich von Michael Nemet"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="book-content">
+
+          <h3>Die KI und Ich</h3>
+
+          <p>
+            Eine persönliche und humorvolle Geschichte darüber,
+            was passiert, wenn aus einer einfachen Frage an eine KI
+            immer neue Fragen entstehen – mit Umwegen, Fehlern,
+            Überraschungen und einigen Aha-Momenten.
+          </p>
+
+          <a
+            class="button"
+            href="https://www.amazon.de/dp/B0HJ4151DC"
+          >
+            Bei Amazon ansehen
+          </a>
+
+        </div>
+      </article>
+
+
+      <article class="book">
+
+        <div class="cover-wrap">
+          <img
+            src="fehler-mit-ansage.webp"
+            alt="Buchcover Fehler mit Ansage von Michael Nemet"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="book-content">
+
+          <h3>Fehler mit Ansage</h3>
+
+          <p>
+            Warum Probleme in Unternehmen selten plötzlich entstehen.
+            Ein Blick auf Produktion, Qualität, Termine und Organisation –
+            und auf die kleinen Warnsignale, die oft lange sichtbar sind,
+            bevor aus ihnen ein echtes Problem wird.
+          </p>
+
+          <a
+            class="button"
+            href="https://www.amazon.de/stores/Michael-Nemet/author/B0HGBTXWJN"
+          >
+            Bei Amazon ansehen
+          </a>
+
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <section class="about" id="autor">
+
+    <h2>Über den Autor</h2>
+
+    <p>
+      Michael Nemet schreibt über Themen, die ihn sowohl beruflich
+      als auch persönlich beschäftigen: technische und organisatorische
+      Zusammenhänge, Entscheidungsprozesse, künstliche Intelligenz
+      und die Frage, warum Dinge in der Praxis häufig anders funktionieren,
+      als sie auf dem Papier geplant waren.
+    </p>
+
+    <p>
+      Im Mittelpunkt stehen verständliche Zusammenhänge,
+      praktische Erfahrungen und ein kritischer Blick auf scheinbar
+      einfache Antworten.
+    </p>
+
+  </section>
+
+
+  <section class="legal" id="impressum">
+
+    <h2>Impressum</h2>
+
+    <p><strong>Angaben gemäß § 5 DDG</strong></p>
+
+    <p>
+      Michael Nemet<br>
+      Norbertstraße 30<br>
+      48691 Vreden<br>
+      Deutschland
+    </p>
+
+    <p>
+      <strong>Kontakt</strong><br>
+
+      Telefon:
+      <a href="tel:+492564392144">
+        +49 2564 392144
+      </a>
+      <br>
+
+      E-Mail:
+      <a href="mailto:autor.nemet@t-online.de">
+        autor.nemet@t-online.de
+      </a>
+    </p>
+
+    <p>
+      <strong>Umsatzsteuer-Identifikationsnummer</strong><br>
+      Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
+      DE464404052
+    </p>
+
+  </section>
+
+
+  <section class="legal" id="datenschutz">
+
+    <h2>Datenschutzerklärung</h2>
+
+
+    <h3>1. Verantwortlicher</h3>
+
+    <p>
+      Verantwortlicher im Sinne der Datenschutz-Grundverordnung
+      (DSGVO) für diese Website ist:
+    </p>
+
+    <p>
+      Michael Nemet<br>
+      Norbertstraße 30<br>
+      48691 Vreden<br>
+      Deutschland<br>
+
+      E-Mail:
+      <a href="mailto:autor.nemet@t-online.de">
+        autor.nemet@t-online.de
+      </a>
+    </p>
+
+
+    <h3>2. Hosting über GitHub Pages</h3>
+
+    <p>
+      Diese Website wird über GitHub Pages bereitgestellt.
+      Anbieter des Dienstes ist GitHub, Inc. beziehungsweise GitHub B.V.
+    </p>
+
+    <p>
+      Beim Aufruf dieser Website können durch GitHub technisch
+      erforderliche Informationen verarbeitet werden.
+      Dazu gehören insbesondere die IP-Adresse, Datum und Uhrzeit
+      des Zugriffs sowie Informationen über das verwendete Gerät
+      und den Browser.
+    </p>
+
+    <p>
+      Die Verarbeitung erfolgt zur technischen Bereitstellung sowie
+      zur Gewährleistung der Stabilität und Sicherheit der Website.
+      Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+      Das berechtigte Interesse besteht im sicheren und störungsfreien
+      Betrieb dieser Website.
+    </p>
+
+    <p>
+      Empfänger der Daten ist insbesondere GitHub als Hosting-Anbieter.
+      Auf die Speicherdauer der durch GitHub verarbeiteten Daten
+      habe ich keinen unmittelbaren Einfluss.
+      Weitere Informationen finden Sie in der
+
+      <a
+        href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
+      >
+        Datenschutzerklärung von GitHub
+      </a>.
+    </p>
+
+
+    <h3>3. Externe Links</h3>
+
+    <p>
+      Diese Website enthält Links zu externen Websites,
+      insbesondere zu Amazon.
+      Erst wenn Sie einen solchen Link anklicken, verlassen Sie diese Website.
+      Für die anschließende Verarbeitung personenbezogener Daten
+      ist der jeweilige externe Anbieter verantwortlich.
+    </p>
+
+
+    <h3>4. Weitere Dienste</h3>
+
+    <p>
+      Diese Website verwendet von meiner Seite aus keine Analysewerkzeuge,
+      kein Kontaktformular, keine eingebetteten sozialen Netzwerke,
+      keine extern eingebundenen Schriftarten sowie keine
+      Werbe- oder Trackingdienste.
+    </p>
+
+
+    <h3>5. Ihre Rechte</h3>
+
+    <p>
+      Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere
+      das Recht auf Auskunft über Ihre personenbezogenen Daten sowie auf
+      Berichtigung, Löschung oder Einschränkung der Verarbeitung.
+      Außerdem besteht das Recht, sich bei einer zuständigen
+      Datenschutzaufsichtsbehörde zu beschweren.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © Michael Nemet
+
+  <br><br>
+
+  <a href="#impressum">Impressum</a>
+  |
+  <a href="#datenschutz">Datenschutz</a>
+
+</footer>
 
 </body>
 </html>
